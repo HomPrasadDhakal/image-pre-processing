@@ -14,3 +14,29 @@ There are 4 different types of Image Pre-Processing techniques and they are list
 2. Geometric Transformations
 3. Image Filtering and Segmentation 
 4. Fourier transform and Image restauration
+
+
+### 1. Pixel brightness transformations(PBT) 
+  Brightness transformations modify pixel brightness and the transformation depends on the properties of a pixel itself. In PBT, output pixel’s value depends only on the corresponding input pixel value. Examples of such operators include brightness and contrast adjustments as well as colour correction and transformations.
+
+  Contrast enhancement is an important area in image processing for both human and computer vision. It is widely used for medical image processing and as a pre-processing step in speech recognition, texture synthesis, and many other image/video processing applications
+
+  #### There are two types of Brightness transformations and they are below.
+  1. Brightness corrections
+  2. Gray scale transformation
+
+  #### The most common Pixel brightness transforms operations are
+  1. Gamma correction or Power Law Transform
+  2. Sigmoid stretching 
+  3. Histogram equalization
+
+  #### Two commonly used point processes are multiplication and addition with a constant.
+  > g(x)=αf(x)+β
+
+  The parameters α>0 and β are called the gain and bias parameters and sometimes these parameters are said to control contrast and brightness respectively.
+  > cv.convertScaleAbs(image, alpha=alpha, beta=beta) 
+
+  for different values of alpha and beta, the image brightness and contrast varies. 
+
+### 2. Gamma Correction
+Gamma correction is a non-linear adjustment to individual pixel values. While in image normalization we carried out linear operations on individual pixels, such as scalar multiplication and addition/subtraction, gamma correction carries out a non-linear operation on the source image pixels, and can cause saturation of the image being altered.
